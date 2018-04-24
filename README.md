@@ -101,8 +101,9 @@ git clone https://github.com/msracver/FCIS.git
 
 	3.2 Clone MXNet and checkout to [MXNet@(commit 998378a)](https://github.com/dmlc/mxnet/tree/998378a) by
 	```
+	cd $(FCIS_ROOT)/external
 	git clone --recursive https://github.com/dmlc/mxnet.git
-	git checkout 998378a
+	#git checkout 998378a this might cause some problem, through my test, without this operation it can run.
 	git submodule update
 	```
 	3.3 Copy channel operators in `$(FCIS_ROOT)/fcis/operator_cxx` to `$(YOUR_MXNET_FOLDER)/src/operator/contrib` by
